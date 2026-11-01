@@ -30,7 +30,8 @@ def add_page_source(driver):
 
 
 def add_video(driver):
-    video_url = "https://selenoid.qa.guru/video/" + driver.session_id + ".mp4"
+    selenoid_host = getattr(driver, "selenoid_url", "https://selenoid.qa.guru")
+    video_url = f"{selenoid_host}/video/{driver.session_id}.mp4"
     html = (
         "<html><body><video width='100%' height='100%' controls autoplay>"
         f"<source src='{video_url}' type='video/mp4'></video></body></html>"

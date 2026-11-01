@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 class RegistrationPage:
-    URL = "https://demoqa.com/automation-practice-form"
+    PATH = "/automation-practice-form"
 
     FIRST_NAME = (By.ID, "firstName")
     LAST_NAME = (By.ID, "lastName")
@@ -24,11 +24,12 @@ class RegistrationPage:
 
     def __init__(self, driver):
         self.driver = driver
+        self.base_url = getattr(driver, "base_url", "https://demoqa.com").rstrip("/")
         self.wait = WebDriverWait(driver, 15)
 
     @allure.step("Open url /automation-practice-form")
     def open(self):
-        self.driver.get(self.URL)
+        self.driver.get(f"{self.base_url}{self.PATH}")
         wrapper = self.wait.until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, ".practice-form-wrapper"))
         )
