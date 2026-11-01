@@ -35,3 +35,8 @@ pytest -v \
 
 Параметризованная job: Choice / String / Boolean → передаются в `pytest`.
 Перед shell создаётся `.env` с логином/паролем Selenoid.
+
+## Telegram notifications
+
+См. `notifications/config.json.example` и `Selenium 1/lesson_14/NOTES.md`.
+Jar: `allure-notifications-4.11.1` (скачивается в Jenkins).

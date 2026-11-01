@@ -1,0 +1,21 @@
+{
+  "base": {
+    "project": "jenkins_ui_tests",
+    "environment": "selenoid",
+    "comment": "qa-guru homework telegram notifications",
+    "reportLink": "",
+    "language": "ru",
+    "allureFolder": "allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "PUT_BOT_TOKEN_HERE",
+    "chat": "PUT_CHAT_ID_HERE",
+    "replyTo": ""
+  },
+  "proxy": {
+    "type": "socks5",
+    "host": "proxy.qaguru.school",
+    "port": 7777
+  }
+}

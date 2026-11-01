@@ -9,3 +9,6 @@ allure-report/
 .idea/
 .DS_Store
 *.log
+
+notifications/config.json
+notifications/*.jar
